@@ -318,4 +318,8 @@ app.listen(port, () => {
   console.log(`- PUT /meetings/:id - Reschedule meeting`);
 });
 
+app.get('/',(req,res)=>{
+  res.send("hey ai ass chat bot");
+});
+
 module.exports = app;
