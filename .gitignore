@@ -1,6 +1,3 @@
-.DS_Store       # For Mac users
-*.log           # Log files
-dist/           # Build output directory
-coverage/       # Test coverage reports
-.env            # Environment variables file
-node_modules/   # Node.js dependencies
+
+.env           
+node_modules/ 
