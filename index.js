@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const { v4: uuidv4 } = require('uuid');
-
+const products = require('./products.json');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -147,6 +147,19 @@ function generateCalendarInvite(meeting, meetingId) {
 app.get('/', (req, res) => {
   res.json({ status: 'Server is running', timestamp: new Date().toISOString() });
 });
+
+
+
+
+
+app.get('/prodData',(req,res)=>{
+  res.json(products);
+});
+
+
+
+
+
 
 app.get('/meetings', (req, res) => {
   const allMeetings = Array.from(meetings.entries()).map(([id, meeting]) => ({
